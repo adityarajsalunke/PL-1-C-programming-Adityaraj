@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    int var1[5];
+    float var2[5];
+    char var3[5];
+    int i, j, k;
+
+    for (i = 0; i <= 4; i++) {
+        printf("Enter your integer value: ");
+        scanf("%d", &var1[i]);
+    }
+    
+    printf("\n--- Integer Array Details ---\n");
+    for (i = 0; i <= 4; i++) {
+        printf("At index %d", i);
+        printf(" the value of var1 is %d", var1[i]);
+        printf(" and address is %p\n", (void*)&var1[i]);
+    }
+    printf("\n");
+
+    j = 0;
+    while (j <= 4) {
+        printf("Enter your float/decimal value: ");
+        scanf("%f", &var2[j]);
+        j++;
+    }
+
+    j = 0;
+    printf("\n--- Float Array Details ---\n");
+    while (j <= 4) {
+        printf("At index %d", j);
+        printf(" the value of var2 is %f", var2[j]);
+        printf(" and address is %p\n", (void*)&var2[j]);
+        j++;
+    }
+    printf("\n");
+
+    k = 0;
+    do {
+        printf("Enter your character value: ");
+        scanf(" %c", &var3[k]); 
+        k++;
+    } while (k <= 4);
+
+    k = 0;
+    printf("\n--- Character Array Details ---\n");
+    do {
+        printf("At index %d", k);
+        printf(" the value of var3 is %c", var3[k]);
+        printf(" and address is %p\n", (void*)&var3[k]);
+        k++;
+    } while (k <= 4);
+
+    return 0;
+}
